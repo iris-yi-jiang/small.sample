@@ -9,7 +9,7 @@
 #'          initial set of (m * n) points by Stein Thinning.
 #' @return n-vector containing the sampled selected points.
 #' @export
-gen_norm <- function(n, mu=0, sig=1, m=20) {
+gen_norm <- function(n, mu=0, sig=1, m=10) {
     x <- rnorm(m * n, mean=mu, sd=sig)
     dim(x) <- c(length(x), 1)
     g <- grad_norm(x, mu=mu, sig=sig)
@@ -27,7 +27,7 @@ gen_norm <- function(n, mu=0, sig=1, m=20) {
 #'          initial set of (m * n) points by Stein Thinning.
 #' @return n-vector containing the sampled selected points.
 #' @export
-gen_chisq <- function(n, df, m=20) {
+gen_chisq <- function(n, df, m=10) {
     if (df < 3) {
         stop("df < 3 is not yet supported.")
     }

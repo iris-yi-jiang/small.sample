@@ -4,7 +4,7 @@
 \alias{gen_norm}
 \title{Normal Points}
 \usage{
-gen_norm(n, mu = 0, sig = 1, m = 20)
+gen_norm(n, mu = 0, sig = 1, m = 10)
 }
 \arguments{
 \item{n}{number of points to generate.}

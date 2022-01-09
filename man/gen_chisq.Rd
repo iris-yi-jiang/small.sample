@@ -4,12 +4,12 @@
 \alias{gen_chisq}
 \title{Chi-Squared Points}
 \usage{
-gen_chisq(n, df, m = 20)
+gen_chisq(n, df, m = 10)
 }
 \arguments{
 \item{n}{number of points to generate.}
 
-\item{df}{degrees-of-freedom.}
+\item{df}{degrees-of-freedom (must be greater than 2).}
 
 \item{m}{positive scalar such that n points are selected from an
 initial set of (m * n) points by Stein Thinning.}
