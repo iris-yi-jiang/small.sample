@@ -28,11 +28,21 @@ test <- function() {
         id[i, 4] <- moments::kurtosis(x_id)
     }
 
+    png("README_FIG.png", width=9, height=5, units="in", res=300)
     par(mfrow=c(1, 2))
     plot(id[, 1:2], pch=20, col="grey", xlab="Mean", ylab="Variance")
     points(ss[, 1:2], pch=20, col="red")
+    legend("topleft",
+        legend=c("Independent", "small.sample"),
+        horiz=TRUE,
+        xpd=TRUE,
+        inset=c(0, -0.15),
+        bty="n",
+        col=c("grey", "red"),
+        pch=20)
     plot(id[, 3:4], pch=20, col="grey", xlab="Skewness", ylab="Kurtosis")
     points(ss[, 3:4], pch=20, col="red")
+    dev.off()
 
     return(list("ss"=ss, "id"=id))
 }

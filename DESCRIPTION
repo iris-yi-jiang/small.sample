@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "iris.jiang@mq.edu.au",
            comment = c(ORCID = "0000-0003-3708-9574"))
-Description: Small Sample is able to generate a small sample of representative
+Description: small.sample is able to generate a small sample of representative
     points that retain the characteristics of a chosen distribution.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
