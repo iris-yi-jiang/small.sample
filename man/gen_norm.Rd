@@ -4,7 +4,7 @@
 \alias{gen_norm}
 \title{Normal Points}
 \usage{
-gen_norm(n, mu = 0, sig = 1, m = 10)
+gen_norm(n, mu = 0, sig = 1)
 }
 \arguments{
 \item{n}{number of points to generate.}
@@ -12,12 +12,9 @@ gen_norm(n, mu = 0, sig = 1, m = 10)
 \item{mu}{mean.}
 
 \item{sig}{standard deviation.}
-
-\item{m}{positive scalar such that n points are selected from an
-initial set of (m * n) points by Stein Thinning.}
 }
 \value{
-n-vector containing the sampled selected points.
+n-vector containing the sampled points.
 }
 \description{
 Generates points targeting a normal distribution.

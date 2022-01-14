@@ -2,3 +2,5 @@
 
 export(gen_chisq)
 export(gen_norm)
+export(gen_unif)
+export(test)
