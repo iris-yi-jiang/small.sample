@@ -28,7 +28,7 @@ test <- function() {
         id[i, 4] <- moments::kurtosis(x_id)
     }
 
-    png("README_FIG.png", width=9, height=5, units="in", res=300)
+    png("README_FIG.png", width=9, height=4.5, units="in", res=300)
     par(mfrow=c(1, 2))
     plot(id[, 1:2], pch=20, col="grey", xlab="Mean", ylab="Variance")
     points(ss[, 1:2], pch=20, col="red")

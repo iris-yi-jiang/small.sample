@@ -8,7 +8,7 @@ The figure below shows the first four moments of 10,000 samples of size
 to samples generated using small.sample; the grey dots correspond to IID
 samples.
 
-<center><img src="README_FIG.png" width=85%></center>
+<img src="README_FIG.png" width=100%>
 
 # Installing via Github
 One can install the package directly from this repository:
