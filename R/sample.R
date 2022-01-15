@@ -45,3 +45,17 @@ gen_chisq <- function(n, df) {
     x <- qchisq(u, df=df)
     return(x)
 }
+
+#' Exponential Points
+#'
+#' Generates points targeting an Exponential distribution.
+#'
+#' @param n number of points to generate.
+#' @param rate rate parameter.
+#' @return n-vector containing the sampled points.
+#' @export
+gen_exp <- function(n, rate=1) {
+    u <- gen_unif(n, l=0, u=1)
+    x <- qexq(u, rate=rate)
+    return(x)
+}
