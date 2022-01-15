@@ -56,6 +56,6 @@ gen_chisq <- function(n, df) {
 #' @export
 gen_exp <- function(n, rate=1) {
     u <- gen_unif(n, l=0, u=1)
-    x <- qexq(u, rate=rate)
+    x <- qexp(u, rate=rate)
     return(x)
 }
