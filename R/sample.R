@@ -83,3 +83,23 @@ gen_gh <- function(n, a=0, b=1, g=0, h=0) {
     x <- a + b * gz * hz * z
     return(x)
 }
+
+#' g-and-k Points
+#'
+#' Generates points targeting a g-and-k distribution.
+#'
+#' @param n number of points to generate.
+#' @param a location parameter.
+#' @param b scale parameter (> 0).
+#' @param g skewness parameter.
+#' @param k tail-shape parameter (k > -0.5).
+#' @return n-vector containing the sampled points.
+#' @export
+gen_gk <- function(n, a=0, b=1, g=0, k=0) {
+    u <- gen_unif(n, l=0, u=1)
+    z <- qnorm(u, mean=0, sd=1)
+    gz <- 1 + 0.8 * (1 - exp(-g * z)) / (1 + exp(-g * z))
+    kz <- (1 + z ^ 2) ^ k
+    x <- a + b * gz * kz * z
+    return(x)
+}
