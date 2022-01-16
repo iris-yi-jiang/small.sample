@@ -59,3 +59,27 @@ gen_exp <- function(n, rate=1) {
     x <- qexp(u, rate=rate)
     return(x)
 }
+
+#' Tukey's g-and-h Points
+#'
+#' Generates points targeting a g-and-h distribution.
+#'
+#' @param n number of points to generate.
+#' @param a location parameter.
+#' @param b scale parameter (> 0).
+#' @param g skewness parameter.
+#' @param h tail-shape parameter (>= 0).
+#' @return n-vector containing the sampled points.
+#' @export
+gen_gh <- function(n, a=0, b=1, g=0, h=0) {
+    u <- gen_unif(n, l=0, u=1)
+    z <- qnorm(u, mean=0, sd=1)
+    if (g != 0) {
+        gz <- (exp(g * z) - 1) / (g * z)
+    } else {
+        gz <- 1
+    }
+    hz <- exp((h * z ^ 2) / 2)
+    x <- a + b * gz * hz * z
+    return(x)
+}
