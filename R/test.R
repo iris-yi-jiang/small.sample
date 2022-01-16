@@ -9,8 +9,8 @@
 #' }
 #' @export
 test <- function() {
-    m = 10000
-    n = 30
+    m <- 10000
+    n <- 30
     ss <- matrix(NA, nrow=m, ncol=4)
     id <- matrix(NA, nrow=m, ncol=4)
 
